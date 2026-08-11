@@ -1,0 +1,103 @@
+.account-screen {
+  padding: var(--space-lg);
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.account-screen h1 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  text-align: left;
+}
+
+.profile-section {
+  margin: var(--space-lg) 0;
+}
+
+.avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  margin: 0 auto var(--space-sm);
+}
+
+.profile-section h2 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  margin: var(--space-sm) 0 4px;
+}
+
+.email, .phone {
+  color: var(--color-gray);
+  font-size: 13px;
+  margin: 2px 0;
+}
+
+.credits-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: var(--space-lg);
+}
+
+.credits-label {
+  color: var(--color-gray);
+  font-size: 13px;
+  margin: 0;
+}
+
+.credits-value {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  margin: var(--space-xs) 0;
+}
+
+.credits-subtext {
+  color: var(--color-gray);
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Desktop: profile card and credits card side by side, matching account-screen-web */
+@media (min-width: 1024px) {
+  .account-screen {
+    max-width: 1120px;
+    text-align: left;
+  }
+
+  .account-screen h1 {
+    font-size: 32px;
+  }
+
+  .account-dashboard {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: var(--space-lg);
+  }
+
+  .profile-section {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: var(--space-lg);
+    text-align: center;
+    margin: 0;
+  }
+
+  .credits-card {
+    padding: 40px;
+  }
+
+  .credits-value {
+    font-size: 48px;
+  }
+}

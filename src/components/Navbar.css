@@ -1,0 +1,57 @@
+.web-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: rgba(21, 16, 31, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.logo-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: var(--color-gray);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--color-white);
+}
+
+/* Mobile: hide the desktop navbar entirely, mobile screens use the bottom tab bar instead */
+@media (max-width: 1023px) {
+  .web-navbar {
+    display: none;
+  }
+}
