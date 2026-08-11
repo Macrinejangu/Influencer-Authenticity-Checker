@@ -1,0 +1,22 @@
+:root {
+  --color-primary: #6B29D9;
+  --color-accent: #ED4799;
+  --color-gray: #8C8C99;
+  --color-yellow: #FAC726;
+  --color-bg-light: #F5F3FA;
+  --color-bg-dark: #15101F;
+  --color-white: #FFFFFF;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-bg-dark);
+  color: var(--color-white);
+}

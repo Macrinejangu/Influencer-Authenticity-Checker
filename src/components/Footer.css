@@ -1,0 +1,13 @@
+.web-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 80px;
+  color: var(--color-gray);
+  font-size: 13px;
+}
+
+@media (max-width: 1023px) {
+  .web-footer {
+    display: none;
+  }
+}
