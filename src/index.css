@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --color-primary: #6B29D9;
   --color-accent: #ED4799;
