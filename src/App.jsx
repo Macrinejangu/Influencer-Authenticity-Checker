@@ -141,6 +141,7 @@ function Role4Tester({
           <option value="tiktok">TikTok</option>
           <option value="youtube">YouTube</option>
           <option value="linkedin">LinkedIn</option>
+          <option value="x">X/Twitter</option>
         </select>
 
         <form onSubmit={handleSearch}>
