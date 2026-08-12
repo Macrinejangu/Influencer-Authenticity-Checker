@@ -1,0 +1,25 @@
+.score-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score-circle {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 6px solid #e5e7eb;
+}
+
+.score-number {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.score-label {
+  margin-top: 8px;
+  font-weight: 600;
+}

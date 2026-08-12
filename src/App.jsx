@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Results from './components/Results.jsx'
-import './index.css'
+import './App.css'
 
 const sampleProfiles = [
   { handle: 'real_influencer', name: 'Aurtha Johnson', followers: 500000, following: 90, posts: 2000, avg_likes: 10000, avg_comments: 3000 },

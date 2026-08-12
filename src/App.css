@@ -1,0 +1,76 @@
+:root {
+  --bg: #0f172a10;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #abcbeb, white);
+  color: var(--accent);
+}
+
+.app-root {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  padding: 20px;
+  border-right: 1px solid #dadae6;
+  background: #fafafa;
+}
+
+.sidebar h2 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+}
+
+.profile-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-list li {
+  margin-bottom: 8px;
+}
+
+.profile-list button {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 8px 10px;
+  width: 100%;
+  text-align: left;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.profile-list li.selected button {
+  background: #c6cbdd;
+  border-color: #c7d2fe;
+}
+
+.main-view {
+  flex: 1;
+  padding: 28px;
+}
+
+@media (max-width: 800px) {
+  .app-root {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+}

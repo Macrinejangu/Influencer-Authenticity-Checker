@@ -1,6 +1,7 @@
 import React from 'react'
 import ScoreBadge from './ScoreBadge.jsx'
 import MetricsBreakdown from './MetricsBreakdown.jsx'
+import './Results.css'
 
 export default function Results({ profile, metrics }) {
   if (!profile || !metrics) {

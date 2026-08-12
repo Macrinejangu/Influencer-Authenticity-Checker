@@ -1,4 +1,5 @@
 import React from 'react'
+import './ScoreBadge.css'
 
 export default function ScoreBadge({ score, label }) {
   const color = label === 'High' ? '#16a34a' : label === 'Medium' ? '#f59e0b' : '#ef4444'

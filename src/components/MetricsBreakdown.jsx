@@ -1,4 +1,5 @@
 import React from 'react'
+import './MetricsBreakdown.css'
 
 function metricRow(label, value, unit = '') {
   return (
