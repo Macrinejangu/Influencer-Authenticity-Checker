@@ -9,15 +9,17 @@ const Platforms = [
   { value: "x", label: "X/Twitter" },
 ];
 
+
  function Search({
-  selectedPlatform,
-  setSelectedPlatform,
-  query,
-  setQuery,
   handleSearch,
-  searchResults,
+  searchResults = [],
   selectProfile,
 }) {
+
+  const [selectedPlatform,setSelectedPlatform]= useState("instagram")
+  const [query, setQuery] = useState("")
+  
+
   return (
       <section className="search-section">
       <label htmlFor="platform">Platform</label>
