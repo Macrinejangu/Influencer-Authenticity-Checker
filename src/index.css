@@ -21,6 +21,11 @@
 body {
   margin: 0;
   font-family: var(--font-body);
-  background: var(--color-bg-dark);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(107, 41, 217, 0.35), transparent 45%),
+    radial-gradient(circle at 10% 90%, rgba(237, 71, 153, 0.28), transparent 50%),
+    var(--color-bg-dark);
+  background-attachment: fixed;
   color: var(--color-white);
+  min-height: 100vh;
 }

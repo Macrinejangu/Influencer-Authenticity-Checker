@@ -49,11 +49,10 @@ export function calculateEngagementScore(profile) {
   const rate = calculateEngagementRate(profile);
 
   if (rate >= 6) return 100;
-  if (rate >= 5) return 90;
-  if (rate >= 4) return 80;
-  if (rate >= 3) return 70;
-  if (rate >= 2) return 60;
-  if (rate >= 1) return 45;
+  if (rate >= 4) return 90;
+  if (rate >= 3) return 80;
+  if (rate >= 2) return 70;
+  if (rate >= 1) return 50;
 
   return 25;
 }
@@ -61,79 +60,79 @@ export function calculateEngagementScore(profile) {
 export function calculateGrowthScore(profile) {
   const growth = calculate30DayGrowth(profile);
 
-  if (growth >= 0 && growth <= 10) {
-    return 100;
+  if (growth < -10) {
+    return 40;
   }
 
-  if (growth > 10 && growth <= 20) {
-    return 90;
-  }
-
-  if (growth > 20 && growth <= 30) {
-    return 75;
-  }
-
-  if (growth > 30 && growth <= 50) {
+  if (growth < 0) {
     return 60;
   }
 
-  if (growth > 50) {
-    return 45;
+  if (growth <= 10) {
+    return 100;
   }
 
-  if (growth < 0 && growth >= -10) {
-    return 85;
+  if (growth <= 20) {
+    return 90;
   }
 
-  return 70;
+  if (growth <= 30) {
+    return 75;
+  }
+
+  if (growth <= 50) {
+    return 60;
+  }
+
+  return 40;
 }
 
 export function calculateLongTermGrowthScore(profile) {
   const growth = calculate90DayGrowth(profile);
 
-  if (growth >= 0 && growth <= 30) {
-    return 100;
+  if (growth < -20) {
+    return 40;
   }
 
-  if (growth > 30 && growth <= 50) {
-    return 90;
-  }
-
-  if (growth > 50 && growth <= 80) {
-    return 75;
-  }
-
-  if (growth > 80) {
+  if (growth < 0) {
     return 60;
   }
 
-  if (growth < 0 && growth >= -20) {
-    return 80;
+  if (growth <= 30) {
+    return 100;
   }
 
-  return 70;
+  if (growth <= 50) {
+    return 90;
+  }
+
+  if (growth <= 80) {
+    return 75;
+  }
+
+  return 50;
 }
 
 export function calculatePostingScore(profile) {
   const posts = calculatePostingActivity(profile);
 
-  if (posts >= 1 && posts <= 30) {
+  if (posts === 0) {
+    return 40;
+  }
+
+  if (posts <= 30) {
     return 100;
   }
 
-  if (posts > 30 && posts <= 40) {
-    return 90;
+  if (posts <= 40) {
+    return 85;
   }
 
-  if (posts > 40 && posts <= 50) {
-    return 75;
+  if (posts <= 50) {
+    return 70;
   }
 
-  if (posts > 50) {
-    return 60;
-  }
-
-  return 70;
+  return 45;
 }
 
 export function calculateAccountAgeScore(profile) {
@@ -144,7 +143,7 @@ export function calculateAccountAgeScore(profile) {
   if (age >= 24) return 80;
   if (age >= 12) return 70;
 
-  return 60;
+  return 50;
 }
 
 export function calculateHeuristicFlags(profile) {
