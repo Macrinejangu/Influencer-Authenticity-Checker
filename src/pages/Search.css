@@ -1,0 +1,92 @@
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.search-section label {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #7B3310;
+}
+
+.search-select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #FFE6D0;
+  background: #FFF5EE;
+  color: #1C0A04;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+.search-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #FFE6D0;
+  background: #FFF5EE;
+  color: #1C0A04;
+  font-size: 15px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #D4703A;
+  color: #FFF5EE;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #7B3310;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #FFE6D0;
+  background: #FFF5EE;
+  cursor: pointer;
+  text-align: left;
+}
+
+
+.profile-handle {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  color: #1C0A04;
+}
+
+.profile-name {
+  font-size: 13px;
+  color: blue;
+}
