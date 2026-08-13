@@ -13,7 +13,7 @@ function useScanHistory() {
           setHistory(Array.isArray(parsed) ? parsed : []);
         }
       } catch (err) {
-        console.error('Failed to parse scan history:', err);
+        console.log('Failed to parse scan history:', err);
         setHistory([]);
       } finally {
         setLoading(false);
@@ -28,13 +28,12 @@ function useScanHistory() {
     try {
       localStorage.setItem('scanHistory', JSON.stringify(newHistory));
     } catch (err) {
-      console.error('Failed to save scan history:', err);
+      console.log('Failed to save scan history:', err);
     }
   }, []);
 
   const addScan = useCallback((scanData) => {
     if (!scanData.handle) {
-      console.warn('Cannot add scan: handle is required');
       return null;
     }
 
@@ -130,7 +129,7 @@ function useScanHistory() {
       }
       return false;
     } catch (err) {
-      console.error('Failed to import history:', err);
+      console.log('Failed to import history:', err);
       return false;
     }
   }, [saveHistory]);
