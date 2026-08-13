@@ -21,7 +21,7 @@ export default function Results({ profile, metrics }) {
           <h2>{profile.username}</h2>
           <div className="handle">{profile.platform}</div>
         </div>
-      </div>
+      </header>header
 
       <div className="results-body">
         <MetricsBreakdown profile={profile} metrics={metrics} />
