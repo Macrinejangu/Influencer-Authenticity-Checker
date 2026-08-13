@@ -8,24 +8,30 @@ export default function Results({ profile, metrics }) {
     return <div className="results-empty">Select a profile to see results.</div>
   }
 
+  const analysis = profile.analysis ?? {
+    score: metrics.score,
+    level: metrics.label,
+    flags: metrics.flags,
+  }
+
   return (
     <section className="results-card">
       <header className="results-header">
         <div>
-          <h2>{profile.name}</h2>
-          <div className="handle">@{profile.handle}</div>
+          <h2>{profile.username}</h2>
+          <div className="handle">@{profile.username}</div>
         </div>
-        <ScoreBadge score={metrics.score} label={metrics.label} />
+        <ScoreBadge score={analysis.score} label={analysis.level} />
       </header>
 
       <div className="results-body">
         <MetricsBreakdown profile={profile} metrics={metrics} />
 
-        {metrics.flags && metrics.flags.length > 0 && (
+        {analysis.flags && analysis.flags.length > 0 && (
           <div className="flags">
             <h3>Flags</h3>
             <ul>
-              {metrics.flags.map((f, i) => (
+              {analysis.flags.map((f, i) => (
                 <li key={i}>{f}</li>
               ))}
             </ul>

@@ -1,36 +1,27 @@
-:root {
-  --bg: #0f172a10;
-  --card: #ffffff;
-  --muted: #6b7280;
-  --accent: #111827;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Inter, system-ui, Arial, sans-serif;
-  margin: 0;
-  background: linear-gradient(180deg, #abcbeb, white);
-  color: var(--accent);
-}
-
 .app-root {
   display: flex;
   min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(168, 85, 247, 0.24), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.18), transparent 30%),
+    #070b17;
+  color: #f8f7ff;
+  font-family: 'Poppins', 'Montserrat', 'Segoe UI', sans-serif;
 }
 
 .sidebar {
-  width: 240px;
-  padding: 20px;
-  border-right: 1px solid #dadae6;
-  background: #fafafa;
+  width: 260px;
+  padding: 22px 18px;
+  border-right: 1px solid rgba(168, 85, 247, 0.25);
+  background: rgba(18, 17, 34, 0.82);
+  backdrop-filter: blur(8px);
 }
 
 .sidebar h2 {
-  margin: 0 0 12px 0;
-  font-size: 16px;
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f5ecff;
 }
 
 .profile-list {
@@ -40,27 +31,42 @@ body {
 }
 
 .profile-list li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .profile-list button {
   background: transparent;
   border: 1px solid transparent;
-  padding: 8px 10px;
+  padding: 10px 12px;
   width: 100%;
   text-align: left;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
+  color: #efeaff;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.profile-list button:hover {
+  border-color: rgba(168, 85, 247, 0.45);
+  background: rgba(168, 85, 247, 0.08);
 }
 
 .profile-list li.selected button {
-  background: #c6cbdd;
-  border-color: #c7d2fe;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.22), rgba(236, 72, 153, 0.12));
+  border-color: rgba(236, 72, 153, 0.7);
+  box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.25);
 }
 
 .main-view {
   flex: 1;
   padding: 28px;
+}
+
+.main-view h1 {
+  margin: 0 0 20px;
+  font-size: clamp(1.7rem, 2vw, 2.3rem);
+  color: #f5ecff;
 }
 
 @media (max-width: 800px) {
@@ -71,6 +77,6 @@ body {
   .sidebar {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.25);
   }
 }

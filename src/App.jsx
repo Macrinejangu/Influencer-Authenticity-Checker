@@ -1,12 +1,44 @@
 import React, { useState } from 'react'
-import Results from './components/Results.jsx'
+import Results from './Pages/Results.jsx'
 import './App.css'
 
 const sampleProfiles = [
-  { handle: 'real_influencer', name: 'Aurtha Johnson', followers: 500000, following: 90, posts: 2000, avg_likes: 10000, avg_comments: 3000 },
-  { handle: 'medium_profile', name: 'TheHidez', followers: 230000, following: 190, posts: 900, avg_likes: 4000, avg_comments: 1500 },
-  { handle: 'fake_profile', name: 'Gilbert', followers: 50000, following: 800, posts: 300, avg_likes: 800, avg_comments: 60 },
-  { handle: 'fake_profile', name: 'Elliude', followers: 20000, following: 1100, posts: 180, avg_likes: 400, avg_comments: 20 },
+  {
+    username: 'real_influencer',
+    followers: 500000,
+    following: 90,
+    posts: 2000,
+    avg_likes: 10000,
+    avg_comments: 3000,
+    analysis: { score: 87, level: 'High', flags: ['Strong engagement', 'Healthy follower ratio'] },
+  },
+  {
+    username: 'medium_profile',
+    followers: 230000,
+    following: 190,
+    posts: 900,
+    avg_likes: 4000,
+    avg_comments: 1500,
+    analysis: { score: 63, level: 'Medium', flags: ['Moderate engagement'] },
+  },
+  {
+    username: 'fake_profile',
+    followers: 50000,
+    following: 800,
+    posts: 300,
+    avg_likes: 800,
+    avg_comments: 60,
+    analysis: { score: 21, level: 'Low', flags: ['Low engagement rate', 'High following compared to followers'] },
+  },
+  {
+    username: 'elliude',
+    followers: 20000,
+    following: 1100,
+    posts: 180,
+    avg_likes: 400,
+    avg_comments: 20,
+    analysis: { score: 14, level: 'Low', flags: ['Low engagement rate', 'High following compared to followers'] },
+  },
 ]
 
 function computeMetrics(profile) {
@@ -33,9 +65,29 @@ function computeMetrics(profile) {
   return { followerFollowingRatio, engagementRate, commentLikeRatio, score, label, flags }
 }
 
+function getProfileAnalysis(profile) {
+  if (!profile) return null
+  const metrics = computeMetrics(profile)
+
+  if (profile.analysis) {
+    return {
+      score: profile.analysis.score ?? metrics.score,
+      level: profile.analysis.level ?? metrics.label,
+      flags: profile.analysis.flags ?? metrics.flags,
+    }
+  }
+
+  return {
+    score: metrics.score,
+    level: metrics.label,
+    flags: metrics.flags,
+  }
+}
+
 export default function App() {
   const [selected, setSelected] = useState(sampleProfiles[0])
   const metrics = computeMetrics(selected)
+  const profile = { ...selected, analysis: getProfileAnalysis(selected) }
 
   return (
     <div className="app-root">
@@ -43,8 +95,8 @@ export default function App() {
         <h2>Sample Profiles</h2>
         <ul className="profile-list">
           {sampleProfiles.map(p => (
-            <li key={p.handle} className={p.handle === selected.handle ? 'selected' : ''}>
-              <button onClick={() => setSelected(p)}>{p.name} @{p.handle}</button>
+            <li key={p.username} className={p.username === selected.username ? 'selected' : ''}>
+              <button onClick={() => setSelected(p)}>@{p.username}</button>
             </li>
           ))}
         </ul>
@@ -52,7 +104,7 @@ export default function App() {
 
       <main className="main-view">
         <h1>Influencer Authenticator — Results</h1>
-        <Results profile={selected} metrics={metrics} />
+        <Results profile={profile} metrics={metrics} />
       </main>
     </div>
   )

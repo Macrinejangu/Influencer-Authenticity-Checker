@@ -1,0 +1,45 @@
+.score-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.trust-badge--high {
+  color: #8b5cf6;
+}
+
+.trust-badge--uncertain {
+  color: #f59e0b;
+}
+
+.trust-badge--suspected {
+  color: #f472b6;
+}
+
+.score-circle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.28), rgba(168, 85, 247, 0.08));
+  border: 4px solid currentColor;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.18);
+}
+
+.score-number {
+  font-size: 22px;
+  font-weight: 700;
+  color: currentColor;
+}
+
+.score-label {
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: currentColor;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
