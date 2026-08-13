@@ -18,6 +18,7 @@ function App() {
 
         <Route path="/history" element={<History />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/error" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );
