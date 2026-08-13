@@ -19,10 +19,9 @@ export default function Results({ profile, metrics }) {
       <header className="results-header">
         <div>
           <h2>{profile.username}</h2>
-          <div className="handle">@{profile.username}</div>
+          <div className="handle">{profile.platform}</div>
         </div>
-        <ScoreBadge score={analysis.score} label={analysis.level} />
-      </header>
+      </div>
 
       <div className="results-body">
         <MetricsBreakdown profile={profile} metrics={metrics} />
@@ -35,7 +34,7 @@ export default function Results({ profile, metrics }) {
                 <li key={i}>{f}</li>
               ))}
             </ul>
-          </div>
+        </div>
         )}
       </div>
     </section>
