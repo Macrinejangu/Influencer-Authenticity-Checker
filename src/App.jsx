@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+                                              
 import Landing from './pages/Landing';
 import Search from './pages/Search';
 import Loading from './pages/Loading';
