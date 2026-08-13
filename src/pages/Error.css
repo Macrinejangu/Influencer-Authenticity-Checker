@@ -1,0 +1,71 @@
+.error-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.error-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 6px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-accent);
+  margin-bottom: var(--space-lg);
+}
+
+.error-screen h2 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  margin: 0 0 var(--space-xs);
+}
+
+.error-screen .subtitle {
+  color: var(--color-gray);
+  font-size: 13px;
+  margin: 0 0 var(--space-lg);
+}
+
+.error-screen .cta-btn {
+  display: inline-block;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 30px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Desktop: larger icon and type, matching error-state-web */
+@media (min-width: 1024px) {
+  .error-screen {
+    min-height: 70vh;
+  }
+
+  .error-icon {
+    width: 180px;
+    height: 180px;
+    font-size: 48px;
+  }
+
+  .error-screen h2 {
+    font-size: 24px;
+  }
+
+  .error-screen .subtitle {
+    font-size: 14px;
+  }
+
+  .error-screen .cta-btn {
+    padding: var(--space-md) 48px;
+  }
+}
