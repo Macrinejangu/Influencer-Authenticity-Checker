@@ -15,9 +15,10 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/loading" element={<Loading />} />
         <Route path="/results/:handle" element={<Results />} />
-        <Route path="/error" element={<ErrorPage />} />
+
         <Route path="/history" element={<History />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/error" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );
