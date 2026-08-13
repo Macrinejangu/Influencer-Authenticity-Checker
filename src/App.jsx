@@ -4,7 +4,7 @@ import Search from './pages/Search';
 import Loading from './pages/Loading';
 import Results from './pages/Results';
 import ErrorPage from './pages/Error';
-// import History from './pages/History';
+import History from './pages/History';
 import Account from './pages/Account';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route path="/loading" element={<Loading />} />
         <Route path="/results/:handle" element={<Results />} />
         <Route path="/error" element={<ErrorPage />} />
-        {/* <Route path="/history" element={<History />} /> */}
+        <Route path="/history" element={<History />} />
         <Route path="/account" element={<Account />} />
       </Routes>
     </BrowserRouter>
