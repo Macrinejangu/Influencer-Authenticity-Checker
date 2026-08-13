@@ -5,6 +5,9 @@ import Layout from '../components/Layout';
 import { useProfiles } from '../hooks/useProfiles';
 
 import './Search.css';
+import BottomNav from '../components/BottomNav'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 const Platforms = [
   { value: 'instagram', label: 'Instagram' },

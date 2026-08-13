@@ -1,5 +1,10 @@
-import Layout from '../components/Layout';
-import './Landing.css';
+
+
+import "./Landing.css";
+import BottomNav from '../components/BottomNav'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
+
 
 export default function Landing({
   onGetStarted,
@@ -9,16 +14,14 @@ export default function Landing({
   description = ' Our automated systems cross-references engagement rates, following patterns and comment quality to deliver real time transparency into audience authenticity',
 }) {
   return (
-    <Layout>
-      <div className="landing">
-        <div className="landing_hero">
-          <div className="landing_content">
-            <h1 className="landing_title">
-              Check if any <span className="landing_accent">account</span>
-              <b />
-              is real
-            </h1>
-
+    <div className="landing">
+      <div className="landing_hero">
+        <div className="landing_content">
+          <h1 className="landing_title">
+         Check if any <span className="landing_accent"> account </span>
+         <b/>
+          is real
+         </h1>
             <p className="landing_description">{description}</p>
 
             <button className="landing_button" onClick={onGetStarted}>

@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Search from './pages/Search';
 import Loading from './pages/Loading';
-
 import Results from './pages/Results';
 import ErrorPage from './pages/Error';
 import History from './pages/History';
@@ -19,7 +18,6 @@ function App() {
 
         <Route path="/history" element={<History />} />
         <Route path="/account" element={<Account />} />
-        <Route path="/error" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );

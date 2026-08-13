@@ -46,38 +46,25 @@ export function useScanHistory() {
     setHistory([]);
   }, []);
 
-  const getRecentScans = useCallback(
-    (limit = 5) => {
-      return history.slice(0, limit);
-    },
-    [history],
-  );
+  const getRecentScans = useCallback((limit = 5) => {
+    return history.slice(0, limit);
+  }, [history]);
 
   // These two need the live profiles list (from useProfiles) since platform
   // and trust level aren't stored in history itself, only username/time are.
-  const getHistoryByPlatform = useCallback(
-    (platform, profiles) => {
-      if (!platform || !profiles) return history;
-      return history.filter((entry) => {
-        const profile = profiles.find((p) => p.username === entry.username);
-        return (
-          profile && profile.platform.toLowerCase() === platform.toLowerCase()
-        );
-      });
-    },
-    [history],
-  );
+  const getHistoryByPlatform = useCallback((platform, profiles) => {
+    if (!platform || !profiles) return history;
+    return history.filter((entry) => {
+      const profile = profiles.find((p) => p.username === entry.username);
+      return profile && profile.platform.toLowerCase() === platform.toLowerCase();
+    });
+  }, [history]);
 
-  const searchHistory = useCallback(
-    (query) => {
-      if (!query) return history;
-      const lowerQuery = query.toLowerCase();
-      return history.filter((entry) =>
-        entry.username.toLowerCase().includes(lowerQuery),
-      );
-    },
-    [history],
-  );
+  const searchHistory = useCallback((query) => {
+    if (!query) return history;
+    const lowerQuery = query.toLowerCase();
+    return history.filter((entry) => entry.username.toLowerCase().includes(lowerQuery));
+  }, [history]);
 
   return {
     history,

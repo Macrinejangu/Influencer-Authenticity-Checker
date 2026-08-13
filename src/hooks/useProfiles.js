@@ -32,8 +32,7 @@ export function useProfiles() {
 
         setProfiles(analyzed);
       } catch (err) {
-        console.error('Failed to load influencer profiles:', err);
-        setError('Unable to load influencer profiles.');
+        setError(err.message);
       } finally {
         setLoading(false);
       }
