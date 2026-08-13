@@ -1,5 +1,9 @@
 import {useEffect, useState} from "react"
 import './Loading.css'
+import BottomNav from '../components/BottomNav'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
+
 
 /**
  * LoadingScreen

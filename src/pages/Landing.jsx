@@ -1,6 +1,10 @@
 
 
 import "./Landing.css";
+import BottomNav from '../components/BottomNav'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
+
 
 export default function Landing({
   onGetStarted,
