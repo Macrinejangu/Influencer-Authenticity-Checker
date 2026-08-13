@@ -18,9 +18,9 @@ export default function Landing({
       <div className="landing_hero">
         <div className="landing_content">
           <h1 className="landing_title">
-         Check if any <span className="landing_accent">account</span>
+         Check if any <span className="landing_accent"> account </span>
          <b/>
-         is real
+          is real
          </h1>
             <p className="landing_description">{description}</p>
             <button className="landing_button" onClick={onGetStarted}>Get Started</button>
